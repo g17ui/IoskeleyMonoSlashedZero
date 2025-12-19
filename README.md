@@ -1,4 +1,6 @@
-# IoskeleyMono
+# IoskeleyMonoSlashedZero
+
+**Slashed zero** version of https://github.com/ahatem/IoskeleyMono
 
 ![Ioskeley Mono Cover](assets/SocialPreview.png)
 
