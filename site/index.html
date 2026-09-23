@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="D2xLgKAChfKbVjQlxidI2jr5HuREg-neBkuTSkYcwvA" />
+  <meta name="description" content="Ioskeley Mono — a free, open-source monospace font alternative to Berkeley Mono, built on Iosevka.">
+  <meta name="author" content="Ahmed Hatem">
+  <title>Ioskeley Mono — Free Open Source Monospace Font</title>
+  <meta property="og:title" content="Ioskeley Mono — Free Open Source Monospace Font">
+  <meta property="og:description" content="A free, open-source monospace font alternative to Berkeley Mono, built on Iosevka.">
+  <meta property="og:url" content="https://ahatem.github.io/IoskeleyMono/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="imgs/SocialPreview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ioskeley Mono — Free Open Source Monospace Font">
+  <meta name="twitter:description" content="A free, open-source alternative to Berkeley Mono, built on Iosevka.">
+  <meta name="twitter:image" content="imgs/SocialPreview.png">
+  <link rel="canonical" href="https://ahatem.github.io/IoskeleyMono/">
+  <link rel="shortcut icon" href="imgs/SocialPreview.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" id="prism-theme">
+  <script>
+    // Runs before first paint to avoid a dark flash in light mode.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('ioskeley-theme'); } catch (e) {}
+      var light = saved
+        ? saved === 'light'
+        : window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+      if (light) document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+</head>
+<body>
+<div class="page">
+
+  <!-- Sticky Top Navigation -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-brand-wrap">
+        <span class="site-name">Ioskeley Mono</span>
+        <!-- Integrated Header Width Selector -->
+        <div class="header-width-ctrl" id="header-width-switcher" title="Select default font width for page">
+          <button class="header-w-btn active" data-width="normal">Normal</button>
+          <button class="header-w-btn" data-width="sc">Semi-Cond</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" title="Toggle light / dark" aria-label="Toggle light or dark theme">
+          <svg class="icon-moon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"></path></svg>
+        </button>
+      </div>
+      <nav>
+        <a href="#comparison">Comparison</a>
+        <a href="#tryit">Try It</a>
+        <a href="#waterfall">Scale</a>
+        <a href="#download">Download</a>
+        <a href="#setup">Setup</a>
+        <a href="#weights">Weights</a>
+        <a href="#glyphs">Glyphs</a>
+        <a href="#install">Install</a>
+        <a href="https://github.com/ahatem/IoskeleyMono" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+
+    <h1 class="hero-title">Ioskeley Mono</h1>
+    <p class="tagline">
+      A free, open-source monospace font crafted to match Berkeley Mono's aesthetic.
+      Built by configuring <a href="https://github.com/be5invis/Iosevka" target="_blank" rel="noopener">Iosevka</a>.
+      Two widths, ten weights, italic variants, and Nerd Font support.
+      <strong>Iosevka + Berkeley = Ioskeley</strong>.
+    </p>
+
+    <div class="header-actions">
+      <a href="#download" class="dl-btn">Download Fonts</a>
+      <a href="https://github.com/ahatem/IoskeleyMono" target="_blank" rel="noopener" class="dl-btn dl-btn--outline">GitHub Repository</a>
+    </div>
+
+    <a href="https://github.com/ahatem/IoskeleyMono" target="_blank" rel="noopener" class="os-pill">
+      <span class="os-dot"></span>
+      Open source
+      <span class="os-pill-sep">·</span>
+      <span class="os-pill-sub">SIL OFL 1.1 — Browse on GitHub →</span>
+    </a>
+  </header>
+
+  <hr>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="stat-num">10</span>
+      <span class="stat-label">Weights</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">2</span>
+      <span class="stat-label">Widths</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">&infin;</span>
+      <span class="stat-label">Italic Variants</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num">1000+</span>
+      <span class="stat-label">Glyphs</span>
+    </div>
+  </div>
+
+  <!-- Comparison -->
+  <h2 id="comparison">Comparison with Berkeley Mono</h2>
+  <div class="comp-gallery">
+    <div class="comp-card" data-title="01 — Character Forms: Ioskeley Mono × Berkeley Mono">
+      <img src="imgs/01-Ioskeley-vs-Berkeley-Character-Forms.png"
+           data-dark="imgs/01-Ioskeley-vs-Berkeley-Character-Forms.png"
+           data-light="imgs/01-Ioskeley-vs-Berkeley-Character-Forms-Light.png"
+           alt="Ioskeley Mono vs Berkeley Mono — Character Forms" loading="lazy">
+      <div class="comp-card-action">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+        <span>Expand</span>
+      </div>
+    </div>
+    <div class="comp-card" data-title="02 — Pixel Overlay: Where the forms actually differ">
+      <img src="imgs/02-Ioskeley-vs-Berkeley-Pixel-Overlay.png"
+           data-dark="imgs/02-Ioskeley-vs-Berkeley-Pixel-Overlay.png"
+           data-light="imgs/02-Ioskeley-vs-Berkeley-Pixel-Overlay-Light.png"
+           alt="Ioskeley Mono vs Berkeley Mono — Pixel Overlay" loading="lazy">
+      <div class="comp-card-action">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+        <span>Expand</span>
+      </div>
+    </div>
+    <div class="comp-card" data-title="03 — Real Code: Same code. Same metrics. Different font.">
+      <img src="imgs/03-Ioskeley-vs-Berkeley-Real-Code.png"
+           data-dark="imgs/03-Ioskeley-vs-Berkeley-Real-Code.png"
+           data-light="imgs/03-Ioskeley-vs-Berkeley-Real-Code-Light.png"
+           alt="Ioskeley Mono vs Berkeley Mono — Real Code" loading="lazy">
+      <div class="comp-card-action">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+        <span>Expand</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Live Split Diff Slider -->
+  <div class="split-diff-card">
+    <div class="split-diff-header">
+      <span class="split-diff-title">Live Text Comparison Slider</span>
+      <div class="split-diff-controls">
+        <label for="split-font-sel">Compare against</label>
+        <select id="split-font-sel">
+          <optgroup label="On your system">
+            <option value="ui-monospace, 'Courier New', Courier, monospace" selected>Courier New</option>
+            <option value="Consolas, 'Menlo', 'DejaVu Sans Mono', monospace">Consolas / Menlo</option>
+            <option value="monospace">System default</option>
+          </optgroup>
+          <optgroup label="Web fonts">
+            <option value="JetBrains Mono" data-webfont="JetBrains+Mono:wght@400;700">JetBrains Mono</option>
+            <option value="Fira Code" data-webfont="Fira+Code:wght@400;700">Fira Code</option>
+            <option value="IBM Plex Mono" data-webfont="IBM+Plex+Mono:wght@400;700">IBM Plex Mono</option>
+            <option value="Source Code Pro" data-webfont="Source+Code+Pro:wght@400;700">Source Code Pro</option>
+            <option value="Space Mono" data-webfont="Space+Mono:wght@400;700">Space Mono</option>
+          </optgroup>
+        </select>
+        <span class="split-diff-hint">Drag to compare</span>
+      </div>
+    </div>
+    <div class="split-diff-container" id="split-diff-container">
+      <div class="split-diff-layer split-diff-layer--after">
+        <div class="split-diff-content">
+          <span class="split-badge split-badge--right" id="split-badge-right">Courier New</span>
+          <pre><code class="language-js">const specimen = {
+  zeroes: [0xFC82, 100_000, 0.0],
+  glyphs: "g k r y  Q @ $",
+  ops: ["!=", "==", "===", "<=", ">=", "=>", "->", "::", "&|"],
+  nested: "{ ( [ ] ) }  * ^ -",
+};
+export const render = (q: Map&lt;string, number&gt;) => {
+  if (q.size != 0 && q.get("gkry") >= 0.0) return `Q::$${q.get("@$")}`;
+  return specimen.nested;
+};</code></pre>
+        </div>
+      </div>
+      <div class="split-diff-layer split-diff-layer--before" id="split-diff-before">
+        <div class="split-diff-content">
+          <span class="split-badge split-badge--left">Ioskeley Mono</span>
+          <pre><code class="language-js">const specimen = {
+  zeroes: [0xFC82, 100_000, 0.0],
+  glyphs: "g k r y  Q @ $",
+  ops: ["!=", "==", "===", "<=", ">=", "=>", "->", "::", "&|"],
+  nested: "{ ( [ ] ) }  * ^ -",
+};
+export const render = (q: Map&lt;string, number&gt;) => {
+  if (q.size != 0 && q.get("gkry") >= 0.0) return `Q::$${q.get("@$")}`;
+  return specimen.nested;
+};</code></pre>
+        </div>
+      </div>
+      <div class="split-diff-handle" id="split-diff-handle">
+        <div class="split-diff-handle-line"></div>
+        <div class="split-diff-handle-knob">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="8 18 2 12 8 6"></polyline><polyline points="16 6 22 12 16 18"></polyline></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Try It editor -->
+  <h2 id="tryit">Try It</h2>
+  <div class="try-editor theme-kintsugi" id="try-editor-box">
+    <div class="try-header">
+      <div class="try-lang-wrap">
+        <button class="try-lang-opt active" data-try-lang="js">JS</button>
+        <button class="try-lang-opt" data-try-lang="py">Python</button>
+        <button class="try-lang-opt" data-try-lang="rust">Rust</button>
+        <button class="try-lang-opt" data-try-lang="cpp">C++</button>
+        <button class="try-lang-opt" data-try-lang="haskell">Haskell</button>
+        <button class="try-lang-opt" data-try-lang="java">Java</button>
+        <button class="try-lang-opt" data-try-lang="html">HTML</button>
+      </div>
+    </div>
+
+    <!-- Sample snippets for the selected language -->
+    <div class="try-samples-bar">
+      <span class="try-samples-label">Sample</span>
+      <div class="try-samples" id="try-samples"></div>
+    </div>
+
+    <!-- Playground Controls Bar -->
+    <div class="try-controls-bar">
+      <div class="try-ctrl-group">
+        <label for="try-size-slider">Size: <span id="try-size-val">14.5px</span></label>
+        <input type="range" id="try-size-slider" min="11" max="24" step="0.5" value="14.5">
+      </div>
+      <div class="try-ctrl-group">
+        <label for="try-weight-sel">Weight</label>
+        <select id="try-weight-sel">
+          <option value="100">100 Thin</option>
+          <option value="200">200 ExtraLight</option>
+          <option value="300">300 Light</option>
+          <option value="350">350 SemiLight</option>
+          <option value="400" selected>400 Regular</option>
+          <option value="500">500 Medium</option>
+          <option value="600">600 SemiBold</option>
+          <option value="700">700 Bold</option>
+          <option value="800">800 ExtraBold</option>
+          <option value="900">900 Black</option>
+        </select>
+      </div>
+      <div class="try-ctrl-group">
+        <label for="try-width-sel">Width</label>
+        <select id="try-width-sel">
+          <option value="normal" selected>Normal</option>
+          <option value="sc">Semi-Condensed</option>
+        </select>
+      </div>
+      <div class="try-ctrl-group">
+        <label for="try-theme-sel">Theme</label>
+        <select id="try-theme-sel">
+          <option value="theme-kintsugi" selected>Kintsugi Dark Flared</option>
+          <option value="theme-kintsugi-light">Kintsugi Light Flared</option>
+          <option value="theme-kanagawa">Kanagawa Dragon</option>
+          <option value="theme-tokyonight">Tokyo Night</option>
+          <option value="theme-catppuccin">Catppuccin Mocha</option>
+          <option value="theme-gruvbox">Gruvbox Dark</option>
+          <option value="theme-nord">Nord</option>
+          <option value="theme-dracula">Dracula</option>
+          <option value="theme-onedark">One Dark Pro</option>
+          <option value="theme-solarized-dark">Solarized Dark</option>
+          <option value="theme-solarized-light">Solarized Light</option>
+          <option value="theme-github-dark">GitHub Dark</option>
+          <option value="theme-monokai">Monokai Pro</option>
+        </select>
+      </div>
+      <div class="try-ctrl-group">
+        <button class="try-toggle-btn active" id="try-ligatures-btn" type="button" title="Toggle OpenType Ligatures">
+          <span class="dot-indicator"></span> Ligatures
+        </button>
+      </div>
+    </div>
+
+    <div class="try-body">
+      <pre class="try-gutter" id="try-gutter"></pre>
+      <div class="try-input-wrap">
+        <pre class="try-highlight" aria-hidden="true"><code class="language-js" id="try-highlight"></code></pre>
+        <textarea class="try-input" id="try-input" spellcheck="false" autocomplete="off"
+                  autocapitalize="off" autocorrect="off" wrap="off"
+                  aria-label="Editable code specimen"></textarea>
+      </div>
+    </div>
+    <div class="try-status">
+      <span>Ioskeley Mono</span>
+      <span id="try-status-lang">JavaScript</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Optical Size Waterfall -->
+  <h2 id="waterfall">Optical Size Waterfall</h2>
+  <p>Engineered geometric rhythm and uncompromised hinting preserved across all display scales.</p>
+  <div class="waterfall-box">
+    <div class="waterfall-row" style="--fz: 32px;">
+      <span class="waterfall-meta">32px</span>
+      <span class="waterfall-text">Ioskeley Mono — geometric monospace</span>
+    </div>
+    <div class="waterfall-row" style="--fz: 24px;">
+      <span class="waterfall-meta">24px</span>
+      <span class="waterfall-text">const specimen = render({ mono: true, weights: 10 });</span>
+    </div>
+    <div class="waterfall-row" style="--fz: 18px;">
+      <span class="waterfall-meta">18px</span>
+      <span class="waterfall-text">fn verify_parity(origin: Point, baseline: f64) -&gt; Result&lt;Diff&gt;</span>
+    </div>
+    <div class="waterfall-row" style="--fz: 14px;">
+      <span class="waterfall-meta">14px</span>
+      <span class="waterfall-text">export async function loadBuffer(q: Map&lt;string, number&gt;) =&gt; `Q::${q.get("@$")}`</span>
+    </div>
+    <div class="waterfall-row" style="--fz: 12px;">
+      <span class="waterfall-meta">12px</span>
+      <span class="waterfall-text">0123456789 != == === -&gt; =&gt; &gt;= &lt;= {} [] () &lt;&gt; /* !@#$%^&amp;* */ 0xFC82 100_000 0.0</span>
+    </div>
+    <div class="waterfall-row" style="--fz: 10px;">
+      <span class="waterfall-meta">10px</span>
+      <span class="waterfall-text">drwxr-xr-x  12 user staff 384 May 26 23:40 Cargo.lock (98752 iTerm2 2.3% 1.2% VSZ 4284956)</span>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Download -->
+  <h2 id="download">Download Packages</h2>
+  <p>Not sure which file? Start with <strong>IoskeleyMono.zip</strong>.</p>
+
+  <!-- Highlight Cards Grid -->
+  <div class="dl-cards-grid">
+    <div class="dl-card dl-card--featured">
+      <div class="dl-card-badge">★ Recommended</div>
+      <h3 class="dl-card-title">IoskeleyMono.zip</h3>
+      <p class="dl-card-desc">Standard font package for code editors &amp; IDEs. Full ligatures and full 10-weight axis.</p>
+      <div class="dl-card-tags">
+        <span class="dl-tag">VS Code</span>
+        <span class="dl-tag">Zed</span>
+        <span class="dl-tag">JetBrains</span>
+        <span class="dl-tag">Sublime</span>
+      </div>
+      <a href="https://github.com/ahatem/IoskeleyMono/releases/download/v2.1.0/IoskeleyMono.zip" target="_blank" rel="noopener" class="dl-btn dl-card-btn">Download TTF →</a>
+    </div>
+
+    <div class="dl-card">
+      <div class="dl-card-badge dl-card-badge--cyan">Icons</div>
+      <h3 class="dl-card-title">IoskeleyMono-NerdFont.zip</h3>
+      <p class="dl-card-desc">Patched with Nerd Font v3 symbols for developer shells, Starship prompts, and Neovim.</p>
+      <div class="dl-card-tags">
+        <span class="dl-tag">Neovim</span>
+        <span class="dl-tag">Starship</span>
+        <span class="dl-tag">zsh / fish</span>
+      </div>
+      <a href="https://github.com/ahatem/IoskeleyMono/releases/download/v2.1.0/IoskeleyMono-NerdFont.zip" target="_blank" rel="noopener" class="dl-btn dl-btn--outline dl-card-btn">Download Nerd Font →</a>
+    </div>
+
+    <div class="dl-card">
+      <div class="dl-card-badge dl-card-badge--orange">Terminal Grid</div>
+      <h3 class="dl-card-title">IoskeleyMono-Term.zip</h3>
+      <p class="dl-card-desc">Strict terminal spacing constraints for strict cell alignment in Kitty, Ghostty, and WezTerm.</p>
+      <div class="dl-card-tags">
+        <span class="dl-tag">Kitty</span>
+        <span class="dl-tag">Ghostty</span>
+        <span class="dl-tag">WezTerm</span>
+      </div>
+      <a href="https://github.com/ahatem/IoskeleyMono/releases/download/v2.1.0/IoskeleyMono-Term.zip" target="_blank" rel="noopener" class="dl-btn dl-btn--outline dl-card-btn">Download Term →</a>
+    </div>
+  </div>
+
+  <!-- Full Table -->
+  <table class="dl-table" style="margin-top: 1.25rem;">
+    <thead>
+      <tr><th>File</th><th>Best for</th><th style="text-align:center">Downloads</th><th></th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>IoskeleyMono-NL.zip</td>
+        <td>Apps that can't disable ligatures — Xcode</td>
+        <td class="dl-cell" data-zip="IoskeleyMono-NL.zip"><span class="dl-num">—</span><span class="dl-fill"></span></td>
+        <td><a href="https://github.com/ahatem/IoskeleyMono/releases/download/v2.1.0/IoskeleyMono-NL.zip" target="_blank" rel="noopener">Download →</a></td>
+      </tr>
+      <tr>
+        <td>IoskeleyMono-NL-NerdFont.zip</td>
+        <td>Same, with Nerd Font icons</td>
+        <td class="dl-cell" data-zip="IoskeleyMono-NL-NerdFont.zip"><span class="dl-num">—</span><span class="dl-fill"></span></td>
+        <td><a href="https://github.com/ahatem/IoskeleyMono/releases/download/v2.1.0/IoskeleyMono-NL-NerdFont.zip" target="_blank" rel="noopener">Download →</a></td>
+      </tr>
+      <tr>
+        <td>IoskeleyMono-Web.zip</td>
+        <td>Web / CSS — small subset, WOFF2 for <kbd>@font-face</kbd></td>
+        <td class="dl-cell" data-zip="IoskeleyMono-Web.zip"><span class="dl-num">—</span><span class="dl-fill"></span></td>
+        <td><a href="https://github.com/ahatem/IoskeleyMono/releases/download/v2.1.0/IoskeleyMono-Web.zip" target="_blank" rel="noopener">Download →</a></td>
+      </tr>
+      <tr>
+        <td>IoskeleyMono-Web-Full.zip</td>
+        <td>Web / CSS — full coverage (Greek, Cyrillic, long arrows)</td>
+        <td class="dl-cell" data-zip="IoskeleyMono-Web-Full.zip"><span class="dl-num">—</span><span class="dl-fill"></span></td>
+        <td><a href="https://github.com/ahatem/IoskeleyMono/releases/download/v2.1.0/IoskeleyMono-Web-Full.zip" target="_blank" rel="noopener">Download →</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Editor & Terminal Quick Setup with Kintsugi Palette -->
+  <div style="margin-top: 2.25rem;">
+    <h2 id="setup">Editor &amp; Terminal Setup</h2>
+    <p>Copy-paste ready configs for your daily environment.</p>
+    <div class="config-tabs-box">
+      <div class="config-tabs-nav">
+        <button class="config-tab active" data-cfg="vscode">VS Code</button>
+        <button class="config-tab" data-cfg="zed">Zed</button>
+        <button class="config-tab" data-cfg="ghostty">Ghostty</button>
+        <button class="config-tab" data-cfg="kitty">Kitty</button>
+        <button class="config-tab" data-cfg="alacritty">Alacritty</button>
+        <button class="config-tab" data-cfg="wezterm">WezTerm</button>
+        <button class="config-tab" data-cfg="neovim">Neovim</button>
+      </div>
+      <div class="config-code-wrap">
+        <button class="copy-cfg-btn" id="copy-cfg-btn" type="button" title="Copy snippet to clipboard">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <span id="copy-cfg-text">Copy</span>
+        </button>
+        <pre class="config-code" id="config-code"></pre>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Weights -->
+  <h2 id="weights">Weights Spectrum</h2>
+  <p>Every weight available in Normal and SemiCondensed — each with a matching italic.</p>
+  <table class="wt-table">
+    <thead><tr><th>Weight</th><th>CSS</th><th>Sample</th></tr></thead>
+    <tbody>
+      <tr><td>Thin</td><td>100</td><td class="wt-demo" style="font-weight:100;">The quick brown fox</td></tr>
+      <tr><td>ExtraLight</td><td>200</td><td class="wt-demo" style="font-weight:200;">The quick brown fox</td></tr>
+      <tr><td>Light</td><td>300</td><td class="wt-demo" style="font-weight:300;">The quick brown fox</td></tr>
+      <tr><td>SemiLight</td><td>350</td><td class="wt-demo" style="font-weight:350;">The quick brown fox</td></tr>
+      <tr><td>Regular</td><td>400</td><td class="wt-demo" style="font-weight:400;">The quick brown fox</td></tr>
+      <tr><td>Medium</td><td>500</td><td class="wt-demo" style="font-weight:500;">The quick brown fox</td></tr>
+      <tr><td>SemiBold</td><td>600</td><td class="wt-demo" style="font-weight:600;">The quick brown fox</td></tr>
+      <tr><td>Bold</td><td>700</td><td class="wt-demo" style="font-weight:700;">The quick brown fox</td></tr>
+      <tr><td>ExtraBold</td><td>800</td><td class="wt-demo" style="font-weight:800;">The quick brown fox</td></tr>
+      <tr><td>Black</td><td>900</td><td class="wt-demo" style="font-weight:900;">The quick brown fox</td></tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <!-- Glyphs -->
+  <h2 id="glyphs">Glyphs &amp; Symbols</h2>
+
+  <div class="glyph-section">
+    <h3>Pangrams</h3>
+    <div class="preview-box" style="font-size:0.85rem;line-height:1.8;">
+The quick brown fox jumps over the lazy dog.
+The five boxing wizards jump quickly.
+Pack my box with five dozen liquor jugs.
+Sphinx of black quartz, judge my vow.
+How vexingly quick daft zebras jump!
+私のクローゼットには、青いスカートと白いブラウスしかない。
+    </div>
+  </div>
+
+  <div class="glyph-section">
+    <h3>Numerals &amp; Punctuation</h3>
+    <div class="glyph-grid">
+      <span class="glyph-cell">0</span><span class="glyph-cell">1</span><span class="glyph-cell">2</span><span class="glyph-cell">3</span><span class="glyph-cell">4</span>
+      <span class="glyph-cell">5</span><span class="glyph-cell">6</span><span class="glyph-cell">7</span><span class="glyph-cell">8</span><span class="glyph-cell">9</span>
+      <span class="glyph-cell">!</span><span class="glyph-cell">?</span><span class="glyph-cell">.</span><span class="glyph-cell">,</span><span class="glyph-cell">;</span>
+      <span class="glyph-cell">:</span><span class="glyph-cell">'</span><span class="glyph-cell">"</span><span class="glyph-cell">(</span><span class="glyph-cell">)</span>
+      <span class="glyph-cell">[</span><span class="glyph-cell">]</span><span class="glyph-cell">{</span><span class="glyph-cell">}</span><span class="glyph-cell">&lt;</span><span class="glyph-cell">&gt;</span>
+      <span class="glyph-cell">#</span><span class="glyph-cell">%</span><span class="glyph-cell">&amp;</span><span class="glyph-cell">@</span><span class="glyph-cell">$</span>
+    </div>
+  </div>
+
+  <div class="glyph-section">
+    <h3>Ligatures &amp; Operators</h3>
+    <div class="glyph-grid">
+      <span class="glyph-cell">→</span><span class="glyph-cell">⇒</span><span class="glyph-cell">≥</span><span class="glyph-cell">≤</span><span class="glyph-cell">≠</span>
+      <span class="glyph-cell">==</span><span class="glyph-cell">!=</span><span class="glyph-cell">=&gt;</span><span class="glyph-cell">-&gt;</span><span class="glyph-cell">=&gt;</span>
+      <span class="glyph-cell">&lt;=</span><span class="glyph-cell">&gt;=</span><span class="glyph-cell">&lt;&lt;</span><span class="glyph-cell">&gt;&gt;</span><span class="glyph-cell">::</span>
+      <span class="glyph-cell">//</span><span class="glyph-cell">/*</span><span class="glyph-cell">*/</span><span class="glyph-cell">+=</span><span class="glyph-cell">-=</span>
+      <span class="glyph-cell">*=</span><span class="glyph-cell">/=</span><span class="glyph-cell">++</span><span class="glyph-cell">--</span><span class="glyph-cell">=&gt;</span>
+    </div>
+  </div>
+
+  <div class="glyph-section">
+    <h3>Box Drawing &amp; Geometric Elements</h3>
+    <div class="preview-box" style="font-size:0.82rem;text-align:center;">
+┌───┬───┬───┐   ┏━━━┳━━━┳━━━┓   ╔═══╦═══╦═══╗
+│   │   │   │   ┃   ┃   ┃   ┃   ║   ║   ║   ║
+├───┼───┼───┤   ┣━━━╋━━━╋━━━┫   ╠═══╬═══╬═══╣
+│   │   │   │   ┃   ┃   ┃   ┃   ║   ║   ║   ║
+└───┴───┴───┘   ┗━━━┻━━━┻━━━┛   ╚═══╩═══╩═══╝
+  ▲ ▼ ◀ ▶   █ ▓ ▒ ░   ● ○ ◉ ◎   ← ↑ → ↓   ▸ ▹ ▸ ▹
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Interactive Installation -->
+  <h2 id="install">Installation Guide</h2>
+  <div class="install-tabs-box">
+    <div class="install-tabs-nav">
+      <button class="install-tab active" data-os="macos">macOS</button>
+      <button class="install-tab" data-os="windows">Windows</button>
+      <button class="install-tab" data-os="linux">Linux</button>
+      <button class="install-tab" data-os="package-guide">Package Structure</button>
+    </div>
+    <div class="install-tab-content active" data-os-content="macos">
+      <ol class="install-steps">
+        <li>Download and unzip <code>IoskeleyMono.zip</code></li>
+        <li>Open <code>Normal/Unhinted/</code> (recommended for Retina / high-DPI Mac displays)</li>
+        <li>Select all <code>.ttf</code> files, double-click any font &rarr; <strong>Install Font</strong>, or drag them all into <strong>Font Book</strong></li>
+      </ol>
+    </div>
+    <div class="install-tab-content" data-os-content="windows">
+      <ol class="install-steps">
+        <li>Download and unzip <code>IoskeleyMono.zip</code></li>
+        <li>Open <code>Normal/Hinted/</code> (optimized for Windows ClearType / standard-DPI displays)</li>
+        <li>Select all <code>.ttf</code> files &rarr; Right-click &rarr; <strong>Install for all users</strong></li>
+      </ol>
+    </div>
+    <div class="install-tab-content" data-os-content="linux">
+      <ol class="install-steps">
+        <li>Download and extract your chosen zip file</li>
+        <li>Copy font files to user font directory:
+          <pre class="inline-code-box"><code>mkdir -p ~/.local/share/fonts/IoskeleyMono
+cp Normal/Unhinted/*.ttf ~/.local/share/fonts/IoskeleyMono/</code></pre>
+        </li>
+        <li>Refresh font cache:
+          <pre class="inline-code-box"><code>fc-cache -fv</code></pre>
+        </li>
+      </ol>
+    </div>
+    <div class="install-tab-content" data-os-content="package-guide">
+      <div class="preview-box" style="font-family:var(--m);font-size:0.78rem;line-height:1.6;">
+Normal/
+  Hinted/     ← ClearType / standard-DPI screens (Windows)
+  Unhinted/   ← High-DPI / Retina screens (macOS, Linux HiDPI)
+SemiCondensed/
+  Hinted/
+  Unhinted/
+      </div>
+      <p style="margin-top:0.5rem;font-size:0.8rem;">Every package includes all widths and hinted/unhinted variants. Installing all files in your chosen folder exposes the complete 10-weight axis automatically.</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Enhanced Build from Source -->
+  <h2 id="build">Build from Source</h2>
+  <p>Ioskeley Mono builds are fully automated via GitHub Actions on tagged releases. To compile locally:</p>
+  <div class="build-card">
+    <div class="build-header">
+      <span>Prerequisites: Node.js 18+, npm, Git</span>
+    </div>
+    <pre class="build-code"><code><span class="tok-comment"># 1. Clone repository and upstream Iosevka</span>
+git clone https://github.com/ahatem/IoskeleyMono.git
+git clone --depth 1 https://github.com/be5invis/Iosevka.git
+
+<span class="tok-comment"># 2. Copy the customized build plan</span>
+cp IoskeleyMono/private-build-plans.toml Iosevka/
+
+<span class="tok-comment"># 3. Install build tools and compile fonts</span>
+cd Iosevka
+npm install
+npm run build -- contents::IoskeleyMono contents::IoskeleyMonoTerm</code></pre>
+    <div class="build-footer">
+      <span>Output binaries: <code>Iosevka/dist/IoskeleyMono/</code> and <code>Iosevka/dist/IoskeleyMonoTerm/</code></span>
+    </div>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>
+      Ioskeley Mono is a custom configuration of <a href="https://github.com/be5invis/Iosevka" target="_blank" rel="noopener">Iosevka</a>
+      by <a href="https://github.com/be5invis" target="_blank" rel="noopener">Belleve Invis</a>.
+      Licensed under the <a href="LICENSE" target="_blank" rel="noopener">SIL Open Font License 1.1</a>.
+    </p>
+    <p class="coffee-line">
+      If Ioskeley Mono saves you money on a font license,
+      <a href="https://www.buymeacoffee.com/ahmedhatem" target="_blank" rel="noopener">buy me a coffee</a>.
+    </p>
+  </footer>
+
+</div>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+  <div class="lightbox-container">
+    <div class="lightbox-bar">
+      <span class="lightbox-title" id="lightbox-title">Comparison Specimen</span>
+      <div class="lightbox-controls">
+        <button class="lightbox-btn" id="lightbox-zoom" type="button" title="Toggle 1:1 Pixel Zoom (Z)">
+          <svg class="lightbox-btn-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+          <span id="lightbox-zoom-label">1:1 Zoom</span>
+        </button>
+        <a class="lightbox-btn" id="lightbox-raw" href="#" target="_blank" rel="noopener" title="Open Original in New Tab">
+          <svg class="lightbox-btn-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          <span>Original</span>
+        </a>
+        <button class="lightbox-btn lightbox-btn--close" id="lightbox-close" type="button" title="Close (Esc)" aria-label="Close">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <div class="lightbox-stage" id="lightbox-stage">
+      <button class="lightbox-arrow lightbox-arrow--prev" id="lightbox-prev" type="button" aria-label="Previous image">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <div class="lightbox-viewport" id="lightbox-viewport">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      </div>
+      <button class="lightbox-arrow lightbox-arrow--next" id="lightbox-next" type="button" aria-label="Next image">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+    <div class="lightbox-footer">
+      <span>Click image or press <kbd>Z</kbd> to toggle 1:1 pixel view &middot; <kbd>&larr;</kbd> / <kbd>&rarr;</kbd> to navigate &middot; <kbd>Esc</kbd> to exit</span>
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.terminal-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const wrap = tab.closest('.terminal');
+    wrap.querySelectorAll('.terminal-tab').forEach(t => t.classList.remove('active'));
+    wrap.querySelectorAll('.terminal-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const panel = wrap.querySelector(`[data-term-panel="${tab.dataset.termTab}"]`);
+    if (panel) panel.classList.add('active');
+  });
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" data-autoloader-path="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/"></script>
+  <script data-goatcounter="https://ahatem.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
